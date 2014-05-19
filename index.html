@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  
+  
+  
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css">
+  
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+  
+  <!-- jQuery and jQuery Mobile -->
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.mobile-1.3.2.min.js"></script>
+   
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <a href="#page2" data-icon="add" class="ui-btn-right" onclick="clearHelper()">Tambah</a>
+        <h3>
+            Inventory
+        </h3>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" data-divider-theme="b" data-inset="true" id="listBarang">
+        </ul>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+    
+<!-- Tambah barang -->
+<div data-role="page" id="page2">
+    <div data-theme="a" data-role="header" >
+	<a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+        class="ui-btn-right">
+            List Barang
+        </a>
+        <h3>
+            Tambah Barang
+        </h3>
+    </div>
+    <div data-role="content">
+        <form action="">
+            <div data-role="fieldcontain">
+                <label for="idbarang">
+                    ID Barang
+                </label>
+                <input name="idbarang" id="idbarang" placeholder="Inputkan id barang"
+                value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="iNama">
+                    Nama Barang
+                </label>
+                <input name="namabarang" id="iNama" placeholder="Inputkan Nama barang"
+                value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="iStok">
+                    Stok
+                </label>
+                <input name="stok" id="iStok" placeholder="" value="" type="number">
+            </div>
+			<h3 id="aHelper"></h3>
+            <input id="btn-simpan"  onclick="simpan();" type="button" data-icon="plus" data-iconpos="left"
+            value="Simpan">
+        </form>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+    
+<!-- Detail barang -->
+<div data-role="page" id="page3" data-add-back-btn="true">
+    <div data-theme="a" data-role="header" >
+        <h3>
+            Detail Barang
+        </h3>
+    </div>
+    <div data-role="content" id="konten">
+       
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+    
+<script type="text/javascript" src="js/index.js"></script>
+    
+</body>
+</html>
